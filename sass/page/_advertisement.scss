@@ -1,0 +1,89 @@
+/*================================================
+            advertise_page
+==================================================*/
+.advertiseSection {
+    margin-bottom: 50px;
+
+    .advertiseTitle {
+
+        h2 {
+            text-align: center;
+            font-size: 30px;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+            background-color: #80ccff;
+            color: #fff;
+
+        }
+
+        p {
+            text-align: center;
+            letter-spacing: 0.2em;
+
+            span {
+                color: #f00;
+            }
+        }
+    }
+
+    .advertiseWrap {
+        display: flex;
+        justify-content: space-between;
+
+        .advertiseContents {
+            width: 70%;
+
+            .advertiseImg {
+                margin-bottom: 20px;
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 300px;
+                }
+            }
+
+            p {
+                margin-bottom: 20px;
+            }
+
+            .bold {
+                font-weight: bold;
+            }
+        }
+
+        .subContents {
+            width: 20%;
+
+            h1 {
+                font-size: 20px;
+                background-color: rgba(248, 67, 84, 0.59);
+                color: #fff;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+
+            li {
+                border-bottom: dotted 1px #ccc;
+            }
+
+            li:nth-of-type(4) {
+                a {
+                    background-color: #f4f4f4;
+                }
+            }
+
+            a {
+                font-size: 15px;
+                font-weight: bold;
+                display: block;
+                padding: 20px 10px;
+
+                &:hover {
+                    color: #f00;
+                    transition: .5s;
+                }
+            }
+        }
+    }
+}

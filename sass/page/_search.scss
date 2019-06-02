@@ -1,0 +1,110 @@
+/*================================================
+            search_page
+==================================================*/
+.searchSection {
+    min-height: 100%;
+
+    .searchTitle {
+
+        h2 {
+            text-align: center;
+            font-size: 30px;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+            background-color: #80ccff;
+            color: #fff;
+
+        }
+    }
+
+    .searchBlock {
+        .news {
+            margin-bottom: 50px;
+            padding-top: 20px;
+            border-top: 1px dotted #000
+        }
+
+        .entryInfo {
+            margin-bottom: 20px;
+        }
+
+
+        .time {
+            display: inline-block;
+            margin-left: 20px;
+
+            i {
+                padding-right: 10px;
+            }
+        }
+
+        .post-categories {
+            display: inline-block;
+
+            li {
+                font-weight: bold;
+                background-color: rgba(244, 116, 116, 0.87);
+                border-radius: 12px;
+
+                a {
+                    color: #fff;
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                    padding: 10px;
+                    font-size: 15px;
+                }
+            }
+
+        }
+
+        h1 {
+            margin-bottom: 20px;
+
+            a {
+                font-size: 20px;
+            }
+        }
+
+        .noSearch {
+            padding: 60px 0;
+
+            p {
+                font-size: 20px;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            .topButton {
+                text-align: center;
+                margin: 30px 0;
+
+                p {
+                    text-align: center;
+                }
+
+
+                a {
+                    color: #fff;
+                    background-color: #f00;
+                    display: inline-block;
+                    font-weight: bold;
+                    font-size: 20px;
+                    padding: 10px 40px;
+                    font-size: 30px;
+                    box-shadow: 3px 5px 5px #ccc;
+                    cursor: pointer;
+                    border-radius: 5px;
+                }
+
+                &:active {
+                    position: relative;
+                    border: none;
+                    box-shadow: none;
+                    top: 3px;
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,63 @@
+/*================================================
+            footer
+==================================================*/
+footer {
+  background-color: #333;
+  color: #c8c8c8;
+
+  .fnav {
+    padding: 60px 0;
+
+    .fnavList {
+      display: flex;
+      justify-content: space-between;
+
+      .fnavItem {
+
+        h2 {
+          margin-bottom: 30px;
+
+          a {
+            font-size: 20px;
+
+          }
+        }
+
+        li {
+          font-size: 12px;
+        }
+
+        .tag {
+          margin-bottom: 20px;
+          color: #fff;
+          font-size: 14px;
+        }
+
+
+        a {
+          font-size: 12px;
+          display: block;
+          transition: .5s;
+          color: #c8c8c8;
+          margin-bottom: 10px;
+
+          &:hover {
+            color: rgba(169, 137, 74, 0.8);
+          }
+        }
+
+        .fa-bars {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .copy {
+    background-color: #151515;
+    text-align: center;
+    color: #c8c8c8;
+    padding: 10px 0;
+    font-size: 12px;
+  }
+}

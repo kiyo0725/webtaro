@@ -1,0 +1,107 @@
+/*================================================
+            access_page
+==================================================*/
+.accessSection {
+  margin-bottom: 50px;
+
+  .accessTitle {
+
+    h2 {
+      text-align: center;
+      font-size: 30px;
+      letter-spacing: 0.1em;
+      margin-bottom: 20px;
+      background-color: #80ccff;
+      color: #fff;
+
+    }
+
+    p {
+      text-align: center;
+      letter-spacing: 0.2em;
+
+      span {
+        color: #f00;
+      }
+    }
+  }
+
+  .accessWrap {
+    display: flex;
+    justify-content: space-between;
+
+
+    .accessContents {
+      width: 70%;
+      vertical-align: middle;
+      text-align: center;
+
+      .accessMap {
+        margin-bottom: 30px;
+      }
+
+      .accessTable {
+        width: 100%;
+
+        tr {
+          border-top: 1px solid #f4f4f4;
+          border-right: 1px solid #f4f4f4;
+
+        }
+
+        tr:last-of-type {
+          border-bottom: 1px solid #f4f4f4;
+        }
+
+        th {
+          font-size: 18px;
+          text-align: left;
+          font-weight: normal;
+          background-color: #f4f4f4;
+          padding: 20px;
+          width: 20%;
+        }
+
+        td {
+          text-align: left;
+          font-size: 15px;
+          padding: 20px;
+        }
+      }
+    }
+
+    .subContents {
+      width: 20%;
+
+      h1 {
+        font-size: 20px;
+        background-color: rgba(248, 67, 84, 0.59);
+        color: #fff;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+
+      li {
+        border-bottom: dotted 1px #ccc;
+      }
+
+      li:nth-of-type(2) {
+        a {
+          background-color: #f4f4f4;
+        }
+      }
+
+      a {
+        font-size: 15px;
+        font-weight: bold;
+        display: block;
+        padding: 20px 10px;
+
+        &:hover {
+          color: #f00;
+          transition: .5s;
+        }
+      }
+    }
+  }
+}

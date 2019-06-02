@@ -1,0 +1,2795 @@
+@charset "UTF-8";
+/*================================================
+            reset
+==================================================*/
+/*
+html5doctor.com Reset Stylesheet
+v1.4
+2009-07-27
+Author: Richard Clark - http://richclarkdesign.com
+*/
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+dialog,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+dialog,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/*================================================
+            common
+==================================================*/
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: Avenir, "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana, Roboto, "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  line-height: 1.7;
+  letter-spacing: 0.08em;
+  font-size: 14px;
+  color: #444;
+  text-size-adjust: 100%;
+  height: 100%;
+}
+
+a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #333;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  text-align: justify;
+}
+
+.inner {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+main {
+  margin-top: 80px;
+}
+
+.top {
+  position: fixed;
+  bottom: 5%;
+  right: 3%;
+  display: inline-block;
+  font-size: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+}
+
+.top i {
+  color: #f18282;
+}
+
+.masking {
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  display: none;
+  text-align: center;
+}
+
+.breadcrumbs {
+  padding-top: 20px;
+}
+
+/*================================================
+            footer
+==================================================*/
+footer {
+  background-color: #333;
+  color: #c8c8c8;
+}
+
+footer .fnav {
+  padding: 60px 0;
+}
+
+footer .fnav .fnavList {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .fnav .fnavList .fnavItem h2 {
+  margin-bottom: 30px;
+}
+
+footer .fnav .fnavList .fnavItem h2 a {
+  font-size: 20px;
+}
+
+footer .fnav .fnavList .fnavItem li {
+  font-size: 12px;
+}
+
+footer .fnav .fnavList .fnavItem .tag {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 14px;
+}
+
+footer .fnav .fnavList .fnavItem a {
+  font-size: 12px;
+  display: block;
+  transition: .5s;
+  color: #c8c8c8;
+  margin-bottom: 10px;
+}
+
+footer .fnav .fnavList .fnavItem a:hover {
+  color: rgba(169, 137, 74, 0.8);
+}
+
+footer .fnav .fnavList .fnavItem .fa-bars {
+  display: none;
+}
+
+footer .copy {
+  background-color: #151515;
+  text-align: center;
+  color: #c8c8c8;
+  padding: 10px 0;
+  font-size: 12px;
+}
+
+/*================================================
+            header
+==================================================*/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 8px 20px -20px rgba(0, 0, 0, 0.89);
+}
+
+header .headerInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .headerInner .hName {
+  padding-left: 30px;
+}
+
+header .headerInner .hName img {
+  width: 200px;
+}
+
+header .headerInner .hNav {
+  width: 80%;
+  padding-right: 2%;
+}
+
+header .headerInner .hNav > ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+header .headerInner .hNav > ul li:nth-of-type(n+2):before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 0;
+  height: 20px;
+  width: 2px;
+  background-color: #bbb;
+  transform: skewX(-25deg);
+}
+
+header .headerInner .hNav > ul li.hLogo {
+  padding: 0 20px;
+}
+
+header .headerInner .hNav > ul li.hNavItem {
+  flex-grow: 1;
+  position: relative;
+}
+
+header .headerInner .hNav > ul li.hNavItem > a {
+  text-align: center;
+  display: block;
+  padding: 28px 0;
+  position: relative;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+header .headerInner .hNav > ul li.hNavItem > a.first {
+  color: #a9894a;
+}
+
+header .headerInner .hNav > ul li.hNavItem > a:hover {
+  color: #a9894a;
+}
+
+header .headerInner .hNav > ul li.hNavItem > a:after {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  content: '';
+  width: 0;
+  height: 1px;
+  background: #a9894a;
+}
+
+header .headerInner .hNav > ul li.hNavItem > a:before {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(-50%);
+  content: '';
+  width: 0;
+  height: 1px;
+  background: #a9894a;
+}
+
+header .headerInner .hNav > ul li.hNavItem > a:hover::after {
+  width: 50%;
+  transition: .5s all ease;
+}
+
+.drawerInner {
+  display: none;
+}
+
+.drawerInner .hName {
+  line-height: 80px;
+  padding-left: 30px;
+}
+
+.drawerInner .hName a {
+  font-size: 25px;
+  display: block;
+}
+
+.slideNav {
+  width: 100%;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  display: none;
+}
+
+.slideNav > ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.slideNav > ul li:first-child {
+  background-color: rgba(169, 137, 74, 0.9);
+}
+
+.slideNav > ul li {
+  width: calc(100%/ 5);
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.slideNav > ul li figure {
+  height: 100%;
+}
+
+.slideNav > ul li a {
+  text-align: center;
+  display: block;
+  font-weight: bold;
+  color: #fff;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 200px;
+  width: 100%;
+  height: 100%;
+}
+
+.slideNav > ul li span {
+  font-size: 15px;
+}
+
+#infoNav li:nth-child(2) figure {
+  background-image: url(../img/infoNav_2.jpg);
+  background-size: cover;
+}
+
+#infoNav li:nth-child(2):hover figure {
+  opacity: 0.8;
+  transform: scale(1.1);
+  transition: .5s;
+}
+
+#infoNav li:nth-child(3) figure {
+  background-image: url(../img/infoNav_3.jpg);
+  background-size: cover;
+}
+
+#infoNav li:nth-child(3):hover figure {
+  opacity: 0.8;
+  transform: scale(1.1);
+  transition: .5s;
+}
+
+#infoNav li:nth-child(4) figure {
+  background-image: url(../img/infoNav_4.jpg);
+  background-size: cover;
+}
+
+#infoNav li:nth-child(4):hover figure {
+  opacity: 0.8;
+  transform: scale(1.1);
+  transition: .5s;
+}
+
+#infoNav li:nth-child(5) figure {
+  background-image: url(../img/infoNav_5.jpg);
+  background-size: cover;
+}
+
+#infoNav li:nth-child(5):hover figure {
+  opacity: 0.8;
+  transform: scale(1.1);
+  transition: .5s;
+}
+
+#businessNav li:nth-child(2) figure {
+  background-image: url(../img/businessNav_2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#businessNav li:nth-child(2):hover figure {
+  opacity: 0.8;
+  transform: scale(1.1);
+  transition: .5s;
+}
+
+#businessNav li:nth-child(3) figure {
+  background-image: url(../img/businessNav_3.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#businessNav li:nth-child(3):hover figure {
+  opacity: 0.8;
+  transform: scale(1.1);
+  transition: .5s;
+}
+
+#businessNav li:nth-child(4) figure {
+  background-image: url(../img/businessNav_4.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#businessNav li:nth-child(4):hover figure {
+  opacity: 0.8;
+  transform: scale(1.1);
+  transition: .5s;
+}
+
+#businessNav li:nth-child(5) figure {
+  background-image: url(../img/businessNav_5.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#businessNav li:nth-child(5):hover figure {
+  opacity: 0.8;
+  transform: scale(1.1);
+  transition: .5s;
+}
+
+.searchform #sbox {
+  outline: 0;
+  height: 50px;
+  padding: 0 10px;
+  border-radius: 2px 0 0 2px;
+  background: #eee;
+}
+
+.searchform #sbtn {
+  width: 70px;
+  height: 50px;
+  border-radius: 0 2px 2px 0;
+  background: #7fbfff;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.searchform #sbtn:hover {
+  color: #666;
+}
+
+/*================================================
+            404_page
+==================================================*/
+.errorSection {
+  height: 100%;
+}
+
+.errorSection .errorImage {
+  margin: 50px auto;
+}
+
+.errorSection .errorImage img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.errorSection p {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.errorSection .topButton {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.errorSection .topButton a {
+  color: #fff;
+  background-color: #f00;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px 40px;
+  font-size: 30px;
+  box-shadow: 3px 5px 5px #ccc;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.errorSection .topButton:active {
+  position: relative;
+  border: none;
+  box-shadow: none;
+  top: 3px;
+}
+
+/*================================================
+            access_page
+==================================================*/
+.accessSection {
+  margin-bottom: 50px;
+}
+
+.accessSection .accessTitle h2 {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+  background-color: #80ccff;
+  color: #fff;
+}
+
+.accessSection .accessTitle p {
+  text-align: center;
+  letter-spacing: 0.2em;
+}
+
+.accessSection .accessTitle p span {
+  color: #f00;
+}
+
+.accessSection .accessWrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.accessSection .accessWrap .accessContents {
+  width: 70%;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.accessSection .accessWrap .accessContents .accessMap {
+  margin-bottom: 30px;
+}
+
+.accessSection .accessWrap .accessContents .accessTable {
+  width: 100%;
+}
+
+.accessSection .accessWrap .accessContents .accessTable tr {
+  border-top: 1px solid #f4f4f4;
+  border-right: 1px solid #f4f4f4;
+}
+
+.accessSection .accessWrap .accessContents .accessTable tr:last-of-type {
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.accessSection .accessWrap .accessContents .accessTable th {
+  font-size: 18px;
+  text-align: left;
+  font-weight: normal;
+  background-color: #f4f4f4;
+  padding: 20px;
+  width: 20%;
+}
+
+.accessSection .accessWrap .accessContents .accessTable td {
+  text-align: left;
+  font-size: 15px;
+  padding: 20px;
+}
+
+.accessSection .accessWrap .subContents {
+  width: 20%;
+}
+
+.accessSection .accessWrap .subContents h1 {
+  font-size: 20px;
+  background-color: rgba(248, 67, 84, 0.59);
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.accessSection .accessWrap .subContents li {
+  border-bottom: dotted 1px #ccc;
+}
+
+.accessSection .accessWrap .subContents li:nth-of-type(2) a {
+  background-color: #f4f4f4;
+}
+
+.accessSection .accessWrap .subContents a {
+  font-size: 15px;
+  font-weight: bold;
+  display: block;
+  padding: 20px 10px;
+}
+
+.accessSection .accessWrap .subContents a:hover {
+  color: #f00;
+  transition: .5s;
+}
+
+/*================================================
+            advertise_page
+==================================================*/
+.advertiseSection {
+  margin-bottom: 50px;
+}
+
+.advertiseSection .advertiseTitle h2 {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+  background-color: #80ccff;
+  color: #fff;
+}
+
+.advertiseSection .advertiseTitle p {
+  text-align: center;
+  letter-spacing: 0.2em;
+}
+
+.advertiseSection .advertiseTitle p span {
+  color: #f00;
+}
+
+.advertiseSection .advertiseWrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.advertiseSection .advertiseWrap .advertiseContents {
+  width: 70%;
+}
+
+.advertiseSection .advertiseWrap .advertiseContents .advertiseImg {
+  margin-bottom: 20px;
+}
+
+.advertiseSection .advertiseWrap .advertiseContents .advertiseImg img {
+  display: block;
+  width: 100%;
+  height: 300px;
+}
+
+.advertiseSection .advertiseWrap .advertiseContents p {
+  margin-bottom: 20px;
+}
+
+.advertiseSection .advertiseWrap .advertiseContents .bold {
+  font-weight: bold;
+}
+
+.advertiseSection .advertiseWrap .subContents {
+  width: 20%;
+}
+
+.advertiseSection .advertiseWrap .subContents h1 {
+  font-size: 20px;
+  background-color: rgba(248, 67, 84, 0.59);
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.advertiseSection .advertiseWrap .subContents li {
+  border-bottom: dotted 1px #ccc;
+}
+
+.advertiseSection .advertiseWrap .subContents li:nth-of-type(4) a {
+  background-color: #f4f4f4;
+}
+
+.advertiseSection .advertiseWrap .subContents a {
+  font-size: 15px;
+  font-weight: bold;
+  display: block;
+  padding: 20px 10px;
+}
+
+.advertiseSection .advertiseWrap .subContents a:hover {
+  color: #f00;
+  transition: .5s;
+}
+
+/*================================================
+            app_page
+==================================================*/
+.appSection {
+  margin-bottom: 50px;
+}
+
+.appSection .appTitle h2 {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+  background-color: #80ccff;
+  color: #fff;
+}
+
+.appSection .appTitle p {
+  text-align: center;
+  letter-spacing: 0.2em;
+}
+
+.appSection .appTitle p span {
+  color: #f00;
+}
+
+.appSection .appWrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.appSection .appWrap .appContents {
+  width: 70%;
+}
+
+.appSection .appWrap .appContents .appImg {
+  margin-bottom: 20px;
+}
+
+.appSection .appWrap .appContents .appImg img {
+  display: block;
+  width: 100%;
+  height: 300px;
+}
+
+.appSection .appWrap .appContents p {
+  margin-bottom: 20px;
+}
+
+.appSection .appWrap .subContents {
+  width: 20%;
+}
+
+.appSection .appWrap .subContents h1 {
+  font-size: 20px;
+  background-color: rgba(248, 67, 84, 0.59);
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.appSection .appWrap .subContents li {
+  border-bottom: dotted 1px #ccc;
+}
+
+.appSection .appWrap .subContents li:nth-of-type(2) a {
+  background-color: #f4f4f4;
+}
+
+.appSection .appWrap .subContents a {
+  font-size: 15px;
+  font-weight: bold;
+  display: block;
+  padding: 20px 10px;
+}
+
+.appSection .appWrap .subContents a:hover {
+  color: #f00;
+  transition: .5s;
+}
+
+/*================================================
+            company_page
+==================================================*/
+.companySection {
+  margin-bottom: 50px;
+}
+
+.companySection .companyTitle h2 {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+  background-color: #80ccff;
+  color: #fff;
+}
+
+.companySection .companyTitle p {
+  text-align: center;
+  letter-spacing: 0.2em;
+}
+
+.companySection .companyTitle p span {
+  color: #f00;
+}
+
+.companySection .companyWrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.companySection .companyWrap .companyTable {
+  width: 70%;
+  vertical-align: middle;
+}
+
+.companySection .companyWrap .companyTable tr {
+  border-top: 1px solid #f4f4f4;
+  border-right: 1px solid #f4f4f4;
+}
+
+.companySection .companyWrap .companyTable tr:last-of-type {
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.companySection .companyWrap .companyTable th {
+  font-size: 18px;
+  text-align: left;
+  font-weight: normal;
+  background-color: #f4f4f4;
+  padding: 20px;
+  width: 20%;
+}
+
+.companySection .companyWrap .companyTable td {
+  text-align: left;
+  font-size: 15px;
+  padding: 20px;
+}
+
+.companySection .companyWrap .subContents {
+  width: 20%;
+}
+
+.companySection .companyWrap .subContents h1 {
+  font-size: 20px;
+  background-color: rgba(248, 67, 84, 0.59);
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.companySection .companyWrap .subContents li {
+  border-bottom: dotted 1px #ccc;
+}
+
+.companySection .companyWrap .subContents li:first-of-type a {
+  background-color: #f4f4f4;
+}
+
+.companySection .companyWrap .subContents a {
+  font-size: 15px;
+  font-weight: bold;
+  display: block;
+  padding: 20px 10px;
+}
+
+.companySection .companyWrap .subContents a:hover {
+  color: #f00;
+  transition: .5s;
+}
+
+/*================================================
+            contact_page
+==================================================*/
+.contactSection {
+  margin-bottom: 50px;
+}
+
+.contactSection .contactTitle h2 {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+  background-color: #80ccff;
+  color: #fff;
+}
+
+.contactSection .contactTitle p {
+  text-align: center;
+  letter-spacing: 0.2em;
+}
+
+.contactSection .contactTitle p span {
+  color: #f00;
+}
+
+.contactSection form .contact-table {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+.contactSection form .contact-table tr {
+  margin: 30px 0;
+}
+
+.contactSection form .contact-table tr:nth-of-type(-n+3) th::before {
+  content: "*";
+  color: #f00;
+  font-size: 20px;
+}
+
+.contactSection form .contact-table tr th {
+  text-align: left;
+  padding: 30px 0;
+  width: 40%;
+  vertical-align: middle;
+  font-size: 15px;
+}
+
+.contactSection form .contact-table tr td {
+  vertical-align: middle;
+}
+
+.contactSection form .contact-table tr input {
+  padding: 15px;
+  width: 100%;
+}
+
+.contactSection form .contact-table tr textarea {
+  padding: 15px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.contactSection form p {
+  text-align: center;
+}
+
+.contactSection form input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+.contactSection form input[type="submit"] {
+  margin-top: 30px;
+}
+
+.contactSection form #submit {
+  color: #fff;
+  background-color: #f18282;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px 40px;
+  font-size: 30px;
+  box-shadow: 3px 5px 5px #ccc;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.contactSection form #submit:active {
+  position: relative;
+  border: none;
+  box-shadow: none;
+  top: 3px;
+}
+
+.wpcf7-validation-errors {
+  display: none !important;
+}
+
+/*================================================
+            front_page
+==================================================*/
+main .mainBg {
+  margin: 0 auto 100px;
+  position: relative;
+  width: 100%;
+  height: 60vw;
+  background-color: #e6e6e6;
+  overflow: hidden;
+}
+
+main .mainBg:after {
+  display: block;
+  width: 90vw;
+  height: 100vw;
+  content: '';
+  position: absolute;
+  top: 80px;
+  left: 0;
+  background-color: #26a6ea;
+  z-index: 1;
+}
+
+main .mainBg figure {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: 70vw;
+  height: 50vw;
+  background-image: url(../img/mainBg_1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+main .mainBg .catchCopy {
+  position: absolute;
+  top: 25%;
+  left: 7%;
+  z-index: 3;
+}
+
+main .mainBg .catchCopy h3 {
+  font-size: 55px;
+  color: #fff;
+  overflow: hidden;
+  text-shadow: 3px 3px 0 #000;
+}
+
+main .mainBg .catchCopy h2 {
+  font-size: 9vw;
+  overflow: hidden;
+  color: #ffea00;
+  text-shadow: 3px 3px 0 #000;
+}
+
+main .mainBg .catchCopy p {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: rgba(26, 26, 26, 0.8);
+  color: #fff;
+  padding: 0 15px;
+  overflow: hidden;
+  text-shadow: 3px 3px 0 #000;
+}
+
+main .mainBg .catchCopy p span {
+  color: #ffea00;
+  overflow: hidden;
+  text-shadow: 3px 3px 0 #000;
+}
+
+main .mainBg img {
+  height: 600px;
+  width: 100%;
+  display: block;
+}
+
+main .newsSection {
+  margin-bottom: 100px;
+}
+
+main .newsSection .newsTitle {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+main .newsSection .newsTitle:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background-color: #f00;
+}
+
+main .newsSection .newsTitle h2 {
+  font-size: 30px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+main .newsSection .newsTitle span {
+  display: block;
+  font-size: 12px;
+  color: #f00;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+main .newsSection .newsBox {
+  box-shadow: 0px 7.5px 18px 1.2px rgba(0, 0, 0, 0.12);
+}
+
+main .newsSection .newsBox li {
+  box-shadow: 0px 0.5px 4px 0.2px rgba(0, 0, 0, 0.12);
+}
+
+main .newsSection p {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+main .newsSection p a {
+  color: #000;
+  font-weight: bold;
+  margin: 10px;
+  font-size: 14px;
+}
+
+main .newsSection p a i {
+  color: #e03101;
+  margin-right: 5px;
+}
+
+main .newsSection ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main .newsSection ul li {
+  width: calc(100%/4);
+}
+
+main .newsSection ul li a {
+  font-size: 16px;
+  color: #b8b8b8;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  padding: 15px 20px;
+  background: #f6f6f6;
+  transition: .3s;
+  display: block;
+}
+
+main .newsSection ul li a.current {
+  background: #e03101;
+  color: #fff;
+}
+
+main .newsSection ul li a:hover {
+  background: #e03101;
+  color: #FFF;
+}
+
+main #contents div {
+  padding: 30px 20px;
+  background: #f6f6f6;
+}
+
+main #contents .newsTable {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 980px;
+}
+
+main #contents .newsTable th,
+main #contents .newsTable td {
+  padding: 20px;
+  text-align: left;
+}
+
+main #contents .newsTable th i {
+  margin-right: 10px;
+}
+
+main #contents .newsTable td {
+  font-size: 15px;
+}
+
+main #contents .newsTable td a {
+  font-size: 14px;
+}
+
+main #contents .newsTable td#category {
+  text-align: center;
+}
+
+main #contents .newsTable span {
+  background-color: #f18282;
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px;
+}
+
+main .processSection {
+  margin-bottom: 100px;
+}
+
+main .processSection .processTitle {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+main .processSection .processTitle:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background-color: #f00;
+}
+
+main .processSection .processTitle h2 {
+  font-size: 30px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+main .processSection .processTitle span {
+  display: block;
+  font-size: 12px;
+  color: #f00;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+main .processSection .processContents .processContent {
+  position: relative;
+}
+
+main .processSection .processContents .flex {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 7.5px 18px 1.2px rgba(0, 0, 0, 0.12);
+  position: relative;
+}
+
+main .processSection .processContents .flex .processText {
+  width: 50%;
+  background-color: rgba(247, 147, 235, 0.12);
+  box-shadow: 0px 7.5px 18px 1.2px rgba(0, 0, 0, 0.12);
+  padding: 70px;
+}
+
+main .processSection .processContents .flex .processText h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+  position: relative;
+  text-align: center;
+}
+
+main .processSection .processContents .flex .processImg {
+  width: 50%;
+}
+
+main .processSection .processContents .flex .processImg img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+main .processSection .processContents .processNumber {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(241, 130, 130, 0.51);
+  font-size: 140px;
+  font-weight: bold;
+}
+
+main .pickupSection {
+  margin-bottom: 100px;
+}
+
+main .pickupSection .pickupTitle {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+main .pickupSection .pickupTitle:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background-color: #f00;
+}
+
+main .pickupSection .pickupTitle h2 {
+  font-size: 30px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+main .pickupSection .pickupTitle span {
+  display: block;
+  font-size: 12px;
+  color: #f00;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+main .pickupSection .pickupContents .flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+main .pickupSection .pickupContents .pickupCard {
+  margin-right: 3%;
+  width: calc(90%/3);
+}
+
+main .pickupSection .pickupContents .pickupCard:first-of-type figure::before {
+  content: "NEW";
+  text-align: center;
+  line-height: 40px;
+  z-index: 2;
+  color: #fff;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 70px;
+  height: 40px;
+  background-color: rgba(244, 116, 116, 0.87);
+  box-shadow: 0px 7.5px 18px 1.2px rgba(0, 0, 0, 0.12);
+}
+
+main .pickupSection .pickupContents .pickupCard:nth-of-type(2) figure::before {
+  content: "NEW";
+  text-align: center;
+  line-height: 40px;
+  z-index: 2;
+  color: #fff;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 70px;
+  height: 40px;
+  background-color: rgba(244, 116, 116, 0.87);
+  box-shadow: 0px 7.5px 18px 1.2px rgba(0, 0, 0, 0.12);
+}
+
+main .pickupSection .pickupContents .pickupCard figure {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  max-width: 330px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+main .pickupSection .pickupContents .pickupCard figure img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+main .pickupSection .pickupContents .pickupCard figure:hover img {
+  opacity: 0.8;
+  transform: scale(1.1);
+  transition: .5s;
+}
+
+main .pickupSection .pickupContents .pickupCard .dateContent {
+  position: relative;
+}
+
+main .pickupSection .pickupContents .pickupCard .dateContent .date {
+  font-weight: bold;
+  margin-top: 20px;
+  position: relative;
+}
+
+main .pickupSection .pickupContents .pickupCard .dateContent .date:after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 1px;
+  background-color: #444;
+  top: 50%;
+  left: 30%;
+  transform: translateY(-50%);
+}
+
+main .pickupSection .pickupContents .pickupCard .dateContent .goodBtnAfter {
+  display: none;
+}
+
+main .pickupSection .pickupContents .pickupCard .dateContent .goodBtn,
+main .pickupSection .pickupContents .pickupCard .dateContent .goodBtnAfter {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+main .pickupSection .pickupContents .pickupCard .dateContent .goodBtn i,
+main .pickupSection .pickupContents .pickupCard .dateContent .goodBtnAfter i {
+  color: #f00;
+  font-size: 20px;
+}
+
+main .pickupSection .pickupContents .pickupCard .dateContent .goodBtn i:before,
+main .pickupSection .pickupContents .pickupCard .dateContent .goodBtnAfter i:before {
+  margin-right: 5px;
+}
+
+main .pickupSection .pickupContents .pickupCard h3 {
+  font-size: 25px;
+  margin: 10px 0;
+}
+
+main .pickupSection .pickupContents .pickupCard a {
+  font-size: 14px;
+}
+
+main .pickupSection .pickupContents .pickupCard .tagList {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+main .pickupSection .pickupContents .pickupCard .tagList li {
+  background-color: #e3e3e3;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+main .pickupSection .pickupContents .pickupCard .tagList li a {
+  padding: 5px 10px;
+  font-size: 13px;
+}
+
+/*================================================
+            history_page
+==================================================*/
+.historySection {
+  margin-bottom: 50px;
+}
+
+.historySection .historyTitle h2 {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+  background-color: #80ccff;
+  color: #fff;
+}
+
+.historySection .historyTitle p {
+  text-align: center;
+  letter-spacing: 0.2em;
+}
+
+.historySection .historyTitle p span {
+  color: #f00;
+}
+
+.historySection .historyWrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.historySection .historyWrap .historyTable {
+  width: 70%;
+  vertical-align: middle;
+}
+
+.historySection .historyWrap .historyTable tr {
+  border-top: 1px solid #f4f4f4;
+  border-right: 1px solid #f4f4f4;
+}
+
+.historySection .historyWrap .historyTable tr:last-of-type {
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.historySection .historyWrap .historyTable th {
+  font-size: 15px;
+  text-align: left;
+  font-weight: normal;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.historySection .historyWrap .historyTable td {
+  text-align: left;
+  font-size: 15px;
+  padding: 20px;
+}
+
+.historySection .historyWrap .subContents {
+  width: 20%;
+}
+
+.historySection .historyWrap .subContents h1 {
+  font-size: 20px;
+  background-color: rgba(248, 67, 84, 0.59);
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.historySection .historyWrap .subContents li {
+  border-bottom: dotted 1px #ccc;
+}
+
+.historySection .historyWrap .subContents li:nth-of-type(4) a {
+  background-color: #f4f4f4;
+}
+
+.historySection .historyWrap .subContents a {
+  font-size: 15px;
+  font-weight: bold;
+  display: block;
+  padding: 20px 10px;
+}
+
+.historySection .historyWrap .subContents a:hover {
+  color: #f00;
+  transition: .5s;
+}
+
+/*================================================
+            info_page
+==================================================*/
+.infoSection {
+  margin-bottom: 50px;
+}
+
+.infoSection .infoTitle h2 {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+  background-color: #80ccff;
+  color: #fff;
+}
+
+.infoSection .infoWrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 50px 0;
+}
+
+.infoSection .infoWrap .infoCard {
+  width: calc(95%/2);
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.infoSection .infoWrap .infoCard:nth-of-type(odd) {
+  margin-right: 3%;
+}
+
+.infoSection .infoWrap .infoCard figure {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.infoSection .infoWrap .infoCard figure img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.infoSection .infoWrap .infoCard figure:hover img {
+  opacity: 0.8;
+  transform: scale(1.1);
+  transition: .5s;
+}
+
+.infoSection .infoWrap .infoCard figure:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
+
+.infoSection .infoWrap .infoCard .infoText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.infoSection .infoWrap .infoCard .infoText h3 {
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+}
+
+/*================================================
+            notice_page
+==================================================*/
+.noticeSection .noticeTitle h2 {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+  background-color: #80ccff;
+  color: #fff;
+}
+
+.noticeSection .noticeBlock {
+  display: flex;
+  justify-content: space-between;
+}
+
+.noticeSection .noticeBlock .noticeWrapper {
+  width: 70%;
+}
+
+.noticeSection .noticeBlock .noticeTable {
+  width: 100%;
+}
+
+.noticeSection .noticeBlock .subContents {
+  width: 20%;
+}
+
+.noticeSection .noticeBlock .subContents h1 {
+  font-size: 20px;
+  background-color: rgba(248, 67, 84, 0.59);
+  color: #fff;
+  padding: 10px;
+}
+
+.noticeSection .noticeBlock .subContents a {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.noticeSection .noticeBlock .subContents li {
+  margin-bottom: 10px;
+}
+
+.noticeSection .noticeBlock .recentCategories {
+  margin-bottom: 30px;
+}
+
+.noticeSection .noticeBlock .recentCategories .children {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.noticeSection .noticeBlock .recentCategories .categories {
+  margin: 20px 0;
+}
+
+.noticeSection .noticeBlock .recentArchives .archives {
+  margin: 20px 0;
+}
+
+.noticeSection .noticeTable tr:last-child {
+  border-bottom: 1px dotted #000;
+}
+
+.noticeSection .noticeTable tr td {
+  border-top: 1px dotted #000;
+  padding: 40px 20px;
+  width: 30%;
+}
+
+.noticeSection .noticeTable tr td i {
+  margin-right: 10px;
+}
+
+.noticeSection .noticeTable tr td a {
+  font-size: 14px;
+}
+
+.noticeSection .noticeTable tr td:first-of-type {
+  width: 25%;
+  text-align: center;
+}
+
+.noticeSection .noticeTable tr td:last-of-type {
+  width: 60%;
+}
+
+.noticeSection .noticeTable tr td:last-of-type p {
+  font-size: 15px;
+}
+
+.noticeSection .noticeTable tr .post-categories {
+  background-color: #f18282;
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px;
+}
+
+.noticeSection .noticeTable tr .post-categories a {
+  color: #fff;
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/*================================================
+            principle_page
+==================================================*/
+.principleSection {
+  margin-bottom: 50px;
+}
+
+.principleSection .principleTitle h2 {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+  background-color: #80ccff;
+  color: #fff;
+}
+
+.principleSection .principleTitle p {
+  text-align: center;
+  letter-spacing: 0.2em;
+}
+
+.principleSection .principleTitle p span {
+  color: #f00;
+}
+
+.principleSection .principleWrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.principleSection .principleWrap .principleContents {
+  width: 70%;
+}
+
+.principleSection .principleWrap .principleContents .principleImg {
+  margin-bottom: 20px;
+}
+
+.principleSection .principleWrap .principleContents .principleImg img {
+  display: block;
+  width: 100%;
+  height: 200px;
+}
+
+.principleSection .principleWrap .principleContents h3 {
+  font-size: 20px;
+  text-align: left;
+  margin-bottom: 20px;
+  background: linear-gradient(transparent 60%, rgba(198, 234, 23, 0.46) 40%);
+  display: inline-block;
+}
+
+.principleSection .principleWrap .principleContents p {
+  margin-bottom: 20px;
+}
+
+.principleSection .principleWrap .principleContents .bold {
+  font-weight: bold;
+}
+
+.principleSection .principleWrap .subContents {
+  width: 20%;
+}
+
+.principleSection .principleWrap .subContents h1 {
+  font-size: 20px;
+  background-color: rgba(248, 67, 84, 0.59);
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.principleSection .principleWrap .subContents li {
+  border-bottom: dotted 1px #ccc;
+}
+
+.principleSection .principleWrap .subContents li:nth-of-type(3) a {
+  background-color: #f4f4f4;
+}
+
+.principleSection .principleWrap .subContents a {
+  font-size: 15px;
+  font-weight: bold;
+  display: block;
+  padding: 20px 10px;
+}
+
+.principleSection .principleWrap .subContents a:hover {
+  color: #f00;
+  transition: .5s;
+}
+
+/*================================================
+            search_page
+==================================================*/
+.searchSection {
+  min-height: 100%;
+}
+
+.searchSection .searchTitle h2 {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+  background-color: #80ccff;
+  color: #fff;
+}
+
+.searchSection .searchBlock .news {
+  margin-bottom: 50px;
+  padding-top: 20px;
+  border-top: 1px dotted #000;
+}
+
+.searchSection .searchBlock .entryInfo {
+  margin-bottom: 20px;
+}
+
+.searchSection .searchBlock .time {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.searchSection .searchBlock .time i {
+  padding-right: 10px;
+}
+
+.searchSection .searchBlock .post-categories {
+  display: inline-block;
+}
+
+.searchSection .searchBlock .post-categories li {
+  font-weight: bold;
+  background-color: rgba(244, 116, 116, 0.87);
+  border-radius: 12px;
+}
+
+.searchSection .searchBlock .post-categories li a {
+  color: #fff;
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.searchSection .searchBlock h1 {
+  margin-bottom: 20px;
+}
+
+.searchSection .searchBlock h1 a {
+  font-size: 20px;
+}
+
+.searchSection .searchBlock .noSearch {
+  padding: 60px 0;
+}
+
+.searchSection .searchBlock .noSearch p {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.searchSection .searchBlock .noSearch .topButton {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.searchSection .searchBlock .noSearch .topButton p {
+  text-align: center;
+}
+
+.searchSection .searchBlock .noSearch .topButton a {
+  color: #fff;
+  background-color: #f00;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px 40px;
+  font-size: 30px;
+  box-shadow: 3px 5px 5px #ccc;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.searchSection .searchBlock .noSearch .topButton:active {
+  position: relative;
+  border: none;
+  box-shadow: none;
+  top: 3px;
+}
+
+/*================================================
+            single_page
+==================================================*/
+.singleSection .singleTitle h2 {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+  background-color: #80ccff;
+  color: #fff;
+}
+
+.singleSection .singleBlock {
+  display: flex;
+  justify-content: space-between;
+}
+
+.singleSection .singleBlock .singleWrapper {
+  width: 70%;
+}
+
+.singleSection .singleBlock .singleWrapper .contents {
+  margin: 50px 0 100px;
+}
+
+.singleSection .singleBlock .time {
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.singleSection .singleBlock .post-categories {
+  display: inline-block;
+}
+
+.singleSection .singleBlock .post-categories li {
+  font-weight: bold;
+  background-color: rgba(244, 116, 116, 0.87);
+  border-radius: 12px;
+}
+
+.singleSection .singleBlock .post-categories li a {
+  color: #fff;
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.singleSection .singleBlock .subContents {
+  width: 20%;
+}
+
+.singleSection .singleBlock .subContents h1 {
+  font-size: 20px;
+  background-color: rgba(248, 67, 84, 0.59);
+  color: #fff;
+  padding: 10px;
+}
+
+.singleSection .singleBlock .subContents a {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.singleSection .singleBlock .subContents li {
+  margin-bottom: 10px;
+}
+
+.singleSection .singleBlock .subContents .categories {
+  margin: 20px 0;
+}
+
+.singleSection .singleBlock .subContents .children {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.singleSection .singleBlock .subContents .archives {
+  margin: 20px 0;
+}
+
+/*================================================
+            system_page
+==================================================*/
+.systemSection {
+  margin-bottom: 50px;
+}
+
+.systemSection .systemTitle h2 {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+  background-color: #80ccff;
+  color: #fff;
+}
+
+.systemSection .systemTitle p {
+  text-align: center;
+  letter-spacing: 0.2em;
+}
+
+.systemSection .systemTitle p span {
+  color: #f00;
+}
+
+.systemSection .systemWrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.systemSection .systemWrap .systemContents {
+  width: 70%;
+}
+
+.systemSection .systemWrap .systemContents .systemImg {
+  margin-bottom: 20px;
+}
+
+.systemSection .systemWrap .systemContents .systemImg img {
+  display: block;
+  width: 100%;
+  height: 300px;
+}
+
+.systemSection .systemWrap .systemContents p {
+  margin-bottom: 20px;
+}
+
+.systemSection .systemWrap .subContents {
+  width: 20%;
+}
+
+.systemSection .systemWrap .subContents h1 {
+  font-size: 20px;
+  background-color: rgba(248, 67, 84, 0.59);
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.systemSection .systemWrap .subContents li {
+  border-bottom: dotted 1px #ccc;
+}
+
+.systemSection .systemWrap .subContents li:nth-of-type(3) a {
+  background-color: #f4f4f4;
+}
+
+.systemSection .systemWrap .subContents a {
+  font-size: 15px;
+  font-weight: bold;
+  display: block;
+  padding: 20px 10px;
+}
+
+.systemSection .systemWrap .subContents a:hover {
+  color: #f00;
+  transition: .5s;
+}
+
+/*================================================
+            web_page
+==================================================*/
+.webSection {
+  margin-bottom: 50px;
+}
+
+.webSection .webTitle h2 {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+  background-color: #80ccff;
+  color: #fff;
+}
+
+.webSection .webTitle p {
+  text-align: center;
+  letter-spacing: 0.2em;
+}
+
+.webSection .webTitle p span {
+  color: #f00;
+}
+
+.webSection .webWrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.webSection .webWrap .webContents {
+  width: 70%;
+}
+
+.webSection .webWrap .webContents .webImg {
+  margin-bottom: 20px;
+}
+
+.webSection .webWrap .webContents .webImg img {
+  display: block;
+  width: 100%;
+  height: 300px;
+}
+
+.webSection .webWrap .webContents p {
+  margin-bottom: 20px;
+}
+
+.webSection .webWrap .webContents .bold {
+  font-weight: bold;
+}
+
+.webSection .webWrap .subContents {
+  width: 20%;
+}
+
+.webSection .webWrap .subContents h1 {
+  font-size: 20px;
+  background-color: rgba(248, 67, 84, 0.59);
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.webSection .webWrap .subContents li {
+  border-bottom: dotted 1px #ccc;
+}
+
+.webSection .webWrap .subContents li:first-of-type a {
+  background-color: #f4f4f4;
+}
+
+.webSection .webWrap .subContents a {
+  font-size: 15px;
+  font-weight: bold;
+  display: block;
+  padding: 20px 10px;
+}
+
+.webSection .webWrap .subContents a:hover {
+  color: #f00;
+  transition: .5s;
+}
+
+/*================================================
+            responsive_tablet
+==================================================*/
+@media screen and (max-width: 768px) {
+  /* ---------------- header ---------------*/
+  header .headerInner {
+    display: none;
+  }
+  header .drawerInner {
+    display: block;
+  }
+  header .drawerInner .hName {
+    padding-left: 0;
+    line-height: 0;
+    text-align: center;
+  }
+  header .drawerInner .hName img {
+    height: 50px;
+    width: 170px;
+  }
+  header .hLogo .hName {
+    padding-left: 0;
+    text-align: center;
+    line-height: 50px;
+  }
+  header .hLogo .hName a {
+    display: inline-block;
+    font-size: 20px;
+  }
+  header .searchButton {
+    display: inline-block;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 15px;
+  }
+  header .searchButton i {
+    font-size: 25px;
+  }
+  header .closeButton {
+    display: inline-block;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 14px 21px;
+    display: none;
+  }
+  header .closeButton i {
+    font-size: 25px;
+  }
+  header .searchArea {
+    display: none;
+    background-color: #fff;
+    padding: 20px 10px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    border-top: 2px solid #ebebeb;
+  }
+  header .searchform #sbox {
+    width: 70%;
+  }
+  header .drawer-hamburger {
+    padding: 15px 1rem 23px;
+    background-color: #f18282;
+  }
+  header .drawer-hamburger:hover {
+    background-color: #f18282;
+  }
+  header .drawer-hamburger .drawer-hamburger-icon,
+  header .drawer-hamburger .drawer-hamburger-icon:after,
+  header .drawer-hamburger .drawer-hamburger-icon:before {
+    background-color: #fff;
+  }
+  header .drawer-nav {
+    z-index: 10;
+  }
+  header .drawer-nav .drawer-menu-item {
+    font-size: 1rem;
+    display: block;
+    padding: .75rem;
+    text-decoration: none;
+    color: #222;
+    border-bottom: 2px dotted #ccc;
+  }
+  header .drawer-nav .drawer-menu-item input#sbox {
+    width: 160px;
+  }
+  .drawer-open .drawer-hamburger .drawer-hamburger-icon {
+    background-color: transparent;
+  }
+  /* ---------------- main ---------------*/
+  main {
+    margin-top: 50px;
+  }
+  main .mainBg {
+    min-height: 500px;
+  }
+  main .mainBg .catchCopy h3 {
+    font-size: 35px;
+  }
+  main .mainBg .catchCopy h2 {
+    font-size: 50px;
+  }
+  main .mainBg .catchCopy p {
+    font-size: 18px;
+  }
+  main .mainBg:after {
+    display: none;
+  }
+  main .mainBg figure {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+  }
+  main .newsSection ul li {
+    width: calc(100%/2);
+    margin: 0;
+  }
+  main .newsSection .newsBox {
+    padding: 20px;
+    box-shadow: none;
+  }
+  main #contents .newsTable th {
+    padding: 20px 0;
+  }
+  main #contents .newsTable td {
+    padding: 20px 0 20px 15px;
+  }
+  main .pickupSection .pickupContents .pickupCard {
+    width: 50%;
+    margin: 0;
+    padding: 20px;
+  }
+  main .pickupSection .pickupContents .pickupCard .dateContent .goodBtnAfter {
+    right: 5%;
+  }
+  main .pickupSection .pickupContents .pickupCard .dateContent .goodBtn {
+    right: 5%;
+  }
+  main .pickupSection .pickupContents figure {
+    margin: 0 auto;
+    height: auto;
+  }
+  main .processSection {
+    padding: 0 20px;
+  }
+  main .processSection .processContents .flex {
+    flex-direction: column;
+  }
+  main .processSection .processContents .flex .processImg {
+    width: 100%;
+    order: 1;
+  }
+  main .processSection .processContents .flex .processText {
+    width: 100%;
+    padding: 40px;
+    order: 2;
+  }
+  main .processSection .processContents .processContent {
+    margin-bottom: 50px;
+  }
+  main .processSection .processContents .processContent .processNumber {
+    top: 40%;
+  }
+  /* ---------------- footer ---------------*/
+  footer .fnav {
+    padding: 40px 20px;
+  }
+  footer .fnav .fnavList {
+    display: block;
+  }
+  footer .fnav .fnavList > li:nth-of-type(2) {
+    position: relative;
+  }
+  footer .fnav .fnavList > li:nth-of-type(2) .fa-bars {
+    position: absolute;
+    top: 0;
+    right: 10%;
+    display: block;
+  }
+  footer .fnav .fnavList > li:nth-of-type(3) {
+    position: relative;
+  }
+  footer .fnav .fnavList > li:nth-of-type(3) .fa-bars {
+    position: absolute;
+    top: 0;
+    right: 10%;
+    display: block;
+  }
+  footer .fnav .fnavList .fnavItem {
+    margin-bottom: 30px;
+    border-bottom: 2px dotted #fff;
+  }
+  footer .fnav .fnavList .fnavItem a {
+    display: block;
+  }
+  footer .fnav .fnavList .fnavItem ul li:nth-of-type(n+2) {
+    display: none;
+  }
+  /* ---------------- common ---------------*/
+  .breadcrumbs {
+    padding: 20px;
+  }
+  /* ---------------- info_page ---------------*/
+  .infoSection {
+    padding: 0 20px;
+  }
+  .infoSection .infoWrap {
+    flex-direction: column;
+  }
+  .infoSection .infoWrap .infoCard {
+    width: 100%;
+  }
+  /* ---------------- company_page ---------------*/
+  .companySection {
+    padding: 0 20px;
+  }
+  .companySection .companyWrap {
+    flex-direction: column;
+  }
+  .companySection .companyWrap .companyTable {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .companySection .companyWrap .companyTable th {
+    font-size: 15px;
+    width: 33%;
+  }
+  .companySection .companyWrap .subContents {
+    width: 100%;
+  }
+  /* ---------------- access_page ---------------*/
+  .accessSection {
+    padding: 0 20px;
+  }
+  .accessSection .accessWrap {
+    flex-direction: column;
+  }
+  .accessSection .accessWrap .accessContents {
+    width: 100%;
+  }
+  .accessSection .accessWrap .accessContents .accessMap iframe {
+    width: 100%;
+  }
+  .accessSection .accessWrap .accessContents .accessTable {
+    margin-bottom: 50px;
+  }
+  .accessSection .accessWrap .accessContents .accessTable th {
+    font-size: 15px;
+    width: 33%;
+  }
+  .accessSection .accessWrap .subContents {
+    width: 100%;
+  }
+  /* ---------------- principle_page ---------------*/
+  .principleSection {
+    padding: 0 20px;
+  }
+  .principleSection .principleWrap {
+    flex-direction: column;
+  }
+  .principleSection .principleWrap .principleContents {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .principleSection .principleWrap .principleContents h3 {
+    font-size: 20px;
+    background: none;
+  }
+  .principleSection .principleWrap .subContents {
+    width: 100%;
+  }
+  /* ---------------- history_page ---------------*/
+  .historySection {
+    padding: 0 20px;
+  }
+  .historySection .historyWrap {
+    flex-direction: column;
+  }
+  .historySection .historyWrap .historyTable {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .historySection .historyWrap .historyTable th {
+    font-size: 13px;
+    width: 36%;
+  }
+  .historySection .historyWrap .historyTable td {
+    font-size: 13px;
+  }
+  .historySection .historyWrap .subContents {
+    width: 100%;
+  }
+  /* ---------------- web_page ---------------*/
+  .webSection {
+    padding: 0 20px;
+  }
+  .webSection .webWrap {
+    flex-direction: column;
+  }
+  .webSection .webWrap .webContents {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .webSection .webWrap .webContents .webImg img {
+    height: 200px;
+  }
+  .webSection .webWrap .subContents {
+    width: 100%;
+  }
+  /* ---------------- app_page ---------------*/
+  .appSection {
+    padding: 0 20px;
+  }
+  .appSection .appWrap {
+    flex-direction: column;
+  }
+  .appSection .appWrap .appContents {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .appSection .appWrap .appContents .appImg img {
+    height: 200px;
+  }
+  .appSection .appWrap .subContents {
+    width: 100%;
+  }
+  /* ---------------- system_page ---------------*/
+  .systemSection {
+    padding: 0 20px;
+  }
+  .systemSection .systemWrap {
+    flex-direction: column;
+  }
+  .systemSection .systemWrap .systemContents {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .systemSection .systemWrap .systemContents .systemImg img {
+    height: 200px;
+  }
+  .systemSection .systemWrap .subContents {
+    width: 100%;
+  }
+  /* ---------------- advertise_page ---------------*/
+  .advertiseSection {
+    padding: 0 20px;
+  }
+  .advertiseSection .advertiseWrap {
+    flex-direction: column;
+  }
+  .advertiseSection .advertiseWrap .advertiseContents {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .advertiseSection .advertiseWrap .advertiseContents .advertiseImg img {
+    height: 200px;
+  }
+  .advertiseSection .advertiseWrap .subContents {
+    width: 100%;
+  }
+  /* ---------------- notice_page ---------------*/
+  .noticeSection {
+    padding: 0 20px;
+  }
+  .noticeSection .noticeBlock {
+    flex-direction: column;
+  }
+  .noticeSection .noticeBlock .noticeWrapper {
+    width: 100%;
+  }
+  .noticeSection .noticeBlock .subContents {
+    width: 100%;
+  }
+  /* ---------------- single_page ---------------*/
+  .singleSection {
+    padding: 0 20px;
+  }
+  .singleSection .singleTitle h2 {
+    font-size: 20px;
+  }
+  .singleSection .singleBlock {
+    flex-direction: column;
+  }
+  .singleSection .singleBlock .singleWrapper {
+    width: 100%;
+  }
+  .singleSection .singleBlock .subContents {
+    width: 100%;
+  }
+  /* ---------------- contact_page ---------------*/
+  .contactSection {
+    position: relative;
+    padding: 0 20px;
+  }
+  .contactSection .contactTitle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+  }
+  .contactSection .contactTitle h2 {
+    font-size: 25px;
+  }
+  .contactSection .contactTitle p {
+    font-size: 12px;
+  }
+  .contactSection form .contact-table tr th {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .contactSection form .contact-table tr td {
+    display: block;
+    width: 100%;
+  }
+  .contactSection form .contact-table tr td input {
+    border: 1px solid #ccc;
+  }
+  .contactSection form .contact-table tr textarea {
+    border: 1px solid #ccc;
+  }
+  /* ---------------- search_page ---------------*/
+  .searchSection {
+    padding: 0 20px;
+  }
+  .searchSection .searchTitle h2 {
+    font-size: 20px;
+    padding: 10px 0;
+  }
+  /* ---------------- 404_page ---------------*/
+  .errorSection {
+    padding: 0 20px;
+  }
+  .errorSection p {
+    font-size: 20px;
+  }
+}
+
+/*================================================
+            responsive_sp
+==================================================*/
+@media screen and (max-width: 480px) {
+  main .mainBg .catchCopy {
+    top: 15%;
+    left: 0;
+    padding: 0 10px;
+  }
+  main .newsSection #contents .newsTable td,
+  main .newsSection #contents .newsTable th {
+    display: inline-block;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  main .newsSection #contents .newsTable td {
+    padding: 0;
+  }
+  main .newsSection #contents .newsTable td:last-of-type {
+    display: block;
+    margin-bottom: 30px;
+  }
+  main .newsSection #contents .newsTable td:last-of-type a {
+    font-size: 15px;
+  }
+  main .newsSection #contents .newsTable td#category {
+    text-align: left;
+    display: inline-block;
+    margin-right: 20px;
+  }
+  main .pickupSection .pickupContents .pickupCard {
+    width: 100%;
+  }
+  .noticeSection .noticeTable tr {
+    border-top: 1px dotted #000;
+    border-bottom: 1px dotted #000;
+    padding: 20px 0;
+  }
+  .noticeSection .noticeTable tr td,
+  .noticeSection .noticeTable tr th {
+    display: inline-block;
+    padding: 0;
+    margin-bottom: 20px;
+    border: none;
+  }
+  .noticeSection .noticeTable tr td {
+    padding: 0;
+    width: 40%;
+  }
+  .noticeSection .noticeTable tr td:first-of-type {
+    width: 40%;
+    margin-right: 30px;
+    padding-top: 20px;
+  }
+  .noticeSection .noticeTable tr td:last-of-type {
+    display: block;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  .noticeSection .noticeTable tr td:last-of-type a {
+    font-size: 15px;
+  }
+  .noticeSection .noticeTable tr td#category {
+    text-align: left;
+    display: inline-block;
+    margin-right: 20px;
+  }
+}
+
+/*================================================
+            IE用
+==================================================*/
+@media all and (-ms-high-contrast: none) {
+  .inner {
+    margin: 80px auto 0;
+  }
+  main .mainBg {
+    min-height: 600px;
+  }
+  main .mainBg .catchCopy h2 {
+    font-size: 60px;
+  }
+}
