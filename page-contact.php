@@ -11,13 +11,13 @@
 
         </div>
         <?php
-        if ( have_posts() ) :
-            while ( have_posts() ) : the_post();
+        if (have_posts()) :
+            while (have_posts()) : the_post();
         ?>
-        <!-- contactWrap -->
-        <div class="contactWrap">
-            <?php the_content(); ?>
-        </div><!-- contactWrap -->
+                <!-- contactwrap -->
+                <div class="contactWrap">
+                    <?php the_content(); ?>
+                </div><!-- contactWrap -->
         <?php
             endwhile;
         endif;
