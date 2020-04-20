@@ -5,7 +5,7 @@
     <!-- catchCopy -->
     <ul class="catchCopy">
         <li>
-            <h3>Design Website</h3>
+            <h3>Design</h3>
         </li>
         <li>
             <h2>Better than Today.</h2>
@@ -42,81 +42,81 @@
                     <!-- newsTable -->
                     <table class="newsTable">
                         <?php
-                    if(have_posts()):
-                        while(have_posts()):the_post();
-                    ?>
-                        <tr>
-                            <td id="category"><a href="<?php echo get_category_link(9); ?>"><span>全て</span></a></td>
-                            <th><i class="far fa-calendar-alt"></i><?php the_time('Y-m-d'); ?></th>
-                            <td><a href=" <?php the_permalink(); ?>"><?php the_title(); ?></a></td>
-                        </tr>
+                        if (have_posts()) :
+                            while (have_posts()) : the_post();
+                        ?>
+                                <tr>
+                                    <td id="category"><a href="<?php echo get_category_link(9); ?>"><span>全て</span></a></td>
+                                    <th><i class="far fa-calendar-alt"></i><?php the_time('Y-m-d'); ?></th>
+                                    <td><a href=" <?php the_permalink(); ?>"><?php the_title(); ?></a></td>
+                                </tr>
                         <?php
-                                endwhile;
-                                endif;
-                            ?>
+                            endwhile;
+                        endif;
+                        ?>
                     </table><!-- newsTable -->
                 </div>
                 <div id="tab2">
                     <table class="newsTable">
                         <?php
-                    if(have_posts()):
-                        while(have_posts()):the_post();
-                    ?>
-                        <?php if(in_category(8)) : ?>
+                        if (have_posts()) :
+                            while (have_posts()) : the_post();
+                        ?>
+                                <?php if (in_category(8)) : ?>
 
-                        <tr>
-                            <td id="category"><a href="<?php echo get_category_link(8); ?>"><span>メンテナンス</span></a></td>
-                            <th><i class="far fa-calendar-alt"></i><?php the_time('Y-m-d'); ?></th>
-                            <td><a href=" <?php the_permalink(); ?>"><?php the_title(); ?></a></td>
-                        </tr>
+                                    <tr>
+                                        <td id="category"><a href="<?php echo get_category_link(8); ?>"><span>メンテナンス</span></a></td>
+                                        <th><i class="far fa-calendar-alt"></i><?php the_time('Y-m-d'); ?></th>
+                                        <td><a href=" <?php the_permalink(); ?>"><?php the_title(); ?></a></td>
+                                    </tr>
 
                         <?php
-              endif;
-                endwhile;
-                endif;
+                                endif;
+                            endwhile;
+                        endif;
 
-            ?>
+                        ?>
 
                     </table>
                 </div>
                 <div id="tab3">
                     <table class="newsTable">
                         <?php
-                    if(have_posts()):
-                        while(have_posts()):the_post();
-                    ?>
-                        <?php if(in_category(6)) : ?>
-                        <tr>
-                            <td id="category"><a href="<?php echo get_category_link(6); ?>"><span>お休み</span></a></td>
-                            <th><i class="far fa-calendar-alt"></i><?php the_time('Y-m-d'); ?></th>
-                            <td><a href=" <?php the_permalink(); ?>"><?php the_title(); ?></a></td>
-                        </tr>
+                        if (have_posts()) :
+                            while (have_posts()) : the_post();
+                        ?>
+                                <?php if (in_category(6)) : ?>
+                                    <tr>
+                                        <td id="category"><a href="<?php echo get_category_link(6); ?>"><span>お休み</span></a></td>
+                                        <th><i class="far fa-calendar-alt"></i><?php the_time('Y-m-d'); ?></th>
+                                        <td><a href=" <?php the_permalink(); ?>"><?php the_title(); ?></a></td>
+                                    </tr>
                         <?php
-              endif;
-                endwhile;
-                endif;
-            ?>
+                                endif;
+                            endwhile;
+                        endif;
+                        ?>
 
                     </table>
                 </div>
                 <div id="tab4">
                     <table class="newsTable">
                         <?php
-                    if(have_posts()):
-                        while(have_posts()):the_post();
-                    ?>
-                        <?php if(in_category(4)) : ?>
-                        <tr>
-                            <td id="category"><a href="<?php echo get_category_link(4); ?>"><span>その他</span></a></td>
-                            <th><i class="far fa-calendar-alt"></i><?php the_time('Y-m-d'); ?></th>
-                            <td><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></td>
-                        </tr>
+                        if (have_posts()) :
+                            while (have_posts()) : the_post();
+                        ?>
+                                <?php if (in_category(4)) : ?>
+                                    <tr>
+                                        <td id="category"><a href="<?php echo get_category_link(4); ?>"><span>その他</span></a></td>
+                                        <th><i class="far fa-calendar-alt"></i><?php the_time('Y-m-d'); ?></th>
+                                        <td><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></td>
+                                    </tr>
 
                         <?php
-              endif;
-                endwhile;
-                endif;
-            ?>
+                                endif;
+                            endwhile;
+                        endif;
+                        ?>
                     </table>
                 </div>
             </div><!-- contents -->
