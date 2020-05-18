@@ -234,10 +234,6 @@
                     <figure class="processImg">
                         <img src="<?php echo get_template_directory_uri(); ?>/./img/processImg_3.jpg" alt="コーディング・CMS実装">
                     </figure>
-                    <div class="processText">
-                        <h3>コーディング・CMS実装</h3>
-                        <p>Brackets・VScodeなどのテキストエディタを使用し、HTML・CSS・JavaScript・PHPなどのコーディングを行い、必要に応じて、WordpressなどのCMSを利用します。</p>
-                    </div>
                 </div>
                 <p class="processNumber">3</p>
             </div>
