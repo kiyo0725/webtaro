@@ -209,6 +209,10 @@
                     <figure class="processImg">
                         <img src="<?php echo get_template_directory_uri(); ?>/./img/processImg_1.jpg" alt="ヒアリング・サイト設計">
                     </figure>
+                    <div class="processText">
+                        <h3>ヒアリング・サイト設計</h3>
+                        <p>Webサイトを使って、どのような目的を達成したいのか、どのようなターゲットに利用する価値があるのかを、打ち合わせを重ねながらお客様と一緒にサイトの設計をまとめていきます。</p>
+                    </div>
                 </div>
                 <p class="processNumber">1</p>
             </div>
